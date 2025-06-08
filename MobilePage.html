@@ -63,7 +63,8 @@
       margin: 0 0 10px;
     }
 
-    .download-button {
+    .download-button,
+    a button {
       padding: 12px 24px;
       background-color: var(--primary);
       color: white;
@@ -72,10 +73,11 @@
       border-radius: 8px;
       font-size: 1rem;
       cursor: pointer;
-      margin-top: 20px;
+      margin: 10px 10px 0 0;
     }
 
-    .download-button:hover {
+    .download-button:hover,
+    a button:hover {
       opacity: 0.9;
     }
 
@@ -95,30 +97,29 @@
 
   <div class="container">
     <div class="game">
-      <h2>🔫 Lukintosh's Synthetic Vice <span style="font-size: 0.9rem; color: gray;">(+16)</span></h2>
+      <h2><span role="img" aria-label="Arma">🔫</span> Lukintosh's Synthetic Vice <span style="font-size: 0.9rem; color: gray;">(+16)</span></h2>
       <p>Explore um mundo aberto inspirado em grandes franquias, com ação, mistério e estilo Lukintosh.</p>
-        <a href="https://store.playstation.com/pt-br/concept/10900943/">
-    <button>Jogue no PlayStation 5</button>
-  </a>
-       <a href="https://www.xbox.com/pt-BR/games/store/lsv/9N496SVF4R4S">
-    <button>Jogue no PlayStation 5</button>
-  </a>
+      <a href="https://store.playstation.com/pt-br/concept/10900943/">
+        <button>Jogue no PlayStation 5</button>
+      </a>
+      <a href="https://www.xbox.com/pt-BR/games/store/lsv/9N496SVF4R4S">
+        <button>Jogue no Xbox Series X|S</button>
+      </a>
     </div>
 
     <div class="game">
-      <h2>☕ Lukintosh's Coffee Clicker</h2>
+      <h2><span role="img" aria-label="Café">☕</span> Lukintosh's Coffee Clicker</h2>
       <p>Um jogo viciante onde você tem que usar a estratégia para conseguir pontos no jogo!</p>
-       <a href="ConsolesPage.html">
-    <button>Jogue no PS4, PS5, Xbox Series X|S, Nintendo Switch e Nintendo Switch 2 também!</button>
-  </a>
-  <a href="MobilePage.html">
-    <button>Jogue no iOS e Android também!</button>
-  </a>
-    
+      <a href="ConsolesPage.html">
+        <button>Jogue em consoles (PS4, PS5, Xbox, Switch e Switch 2)</button>
+      </a>
+      <a href="MobilePage.html">
+        <button>Jogue no iOS e Android</button>
+      </a>
     </div>
 
     <div class="game">
-      <h2>🏎️ Lukintosh Kart Racing</h2>
+      <h2><span role="img" aria-label="Corrida">🏎️</span> Lukintosh Kart Racing</h2>
       <p>Corridas malucas com os personagens do universo Lukintosh em pistas insanas!</p>
     </div>
 
@@ -132,7 +133,6 @@
   </footer>
 
   <script>
-    // Detecta o sistema operacional
     const downloadBtn = document.getElementById('downloadBtn');
     const platform = navigator.platform.toLowerCase();
 
@@ -151,7 +151,6 @@
       downloadBtn.disabled = true;
     }
 
-    // Ativa modo escuro automaticamente
     if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
       document.body.classList.add('dark');
     }
